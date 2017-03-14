@@ -1,7 +1,6 @@
 class Api::V1::ProductsController < ApplicationController
-  def index
-    @products = Product.all
-    #render @products.as_json
-    render json: @products
-  end
+	respond_to :json
+	def index
+		respond_with Product.all
+	end
 end
